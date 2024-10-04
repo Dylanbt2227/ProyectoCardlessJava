@@ -1,15 +1,18 @@
 FROM openjdk:17-jdk-slim AS build
 
+# Instalar Maven
+RUN apt-get update && apt-get install -y maven
+
 # Definir el directorio de trabajo
 WORKDIR /app
 
 # Copiar el archivo pom.xml y descargar las dependencias
 COPY pom.xml .
 COPY src ./src
-RUN ./mvnw dependency:go-offline
+RUN mvn dependency:go-offline
 
 # Construir el proyecto
-RUN ./mvnw package -DskipTests
+RUN mvn package -DskipTests
 
 # Etapa de ejecución
 FROM openjdk:17-jdk-slim
