@@ -109,17 +109,6 @@
 					</excludes>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-					<artifactId>metrics-maven-plugin</artifactId>
-				<version>1.6.0</version>
-				
-			</plugin>
-			<plugin>
-				<groupId>com.github.metrics</groupId>
-					<artifactId>metrics-maven-plugin</artifactId>
-				<version>3.2.0</version>
-        </plugin>
 		</plugins>
 	</build>
 
