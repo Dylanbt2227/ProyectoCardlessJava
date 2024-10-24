@@ -12,6 +12,6 @@ public class RandomWordGenerator {
         for (int i = 0; i < length; i++) {
             word.append(ALPHABET.charAt(RANDOM.nextInt(ALPHABET.length())));
         }
-        return word.toString();
+         return word.toString();
     }
 }
